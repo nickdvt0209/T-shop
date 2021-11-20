@@ -1,4 +1,4 @@
-.carousel {
+.hero {
   margin: 50px 0;
   background: $color-gray;
   a {
@@ -13,12 +13,29 @@
   &__image {
     width: 70%;
     margin-right: 10px;
+    border: 5px solid #fff;
+    border-radius: 10px;
+    box-shadow: $color-gray-300 0 0 5px 2px;
     img {
       width: 100%;
-      border: 5px solid #fff;
-      box-shadow: $color-gray-300 0 0 5px 2px;
-      overflow: hidden;
-      border-radius: 10px;
+    }
+    ol {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      margin: 0;
+      padding: 0 15px;
+      li {
+        background: transparent;
+        text-indent: unset;
+        width: unset;
+        height: unset;
+        color: $color-gray-400;
+        text-align: center;
+      }
+      .active {
+        background: transparent;
+        color: $color-primary;
+      }
     }
   }
   &__news {
