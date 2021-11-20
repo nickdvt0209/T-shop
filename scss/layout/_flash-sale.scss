@@ -1,5 +1,5 @@
 .flash-sale {
-  background: #f8f9fa;
+  margin-bottom: 50px;
   a {
     text-decoration: none;
     &:hover {
@@ -90,11 +90,11 @@
           }
         }
         &:last-child {
-          background: $color-yellow;
+          background: $color-blue;
           &:hover {
-            border: 2px solid $color-yellow;
+            border: 2px solid $color-blue;
             background: #fff;
-            color: $color-yellow;
+            color: $color-blue;
           }
         }
       }
@@ -148,7 +148,7 @@
     left: 0;
     width: 100%;
     &-item {
-      height: 350px;
+      height: 307px;
       background: rgba($color: #000000, $alpha: 0.5);
       position: relative;
     }
