@@ -1227,14 +1227,30 @@ input {
 }
 
 .footer__rocket {
+  position: fixed;
+  bottom: 50px;
+  right: 60px;
+}
+
+.footer__rocket a {
   display: inline-block;
-  padding: 15px;
+  width: 50px;
+  height: 50px;
+  line-height: 1.8;
+  text-align: center;
   background: transparent;
   font-size: 25px;
   color: #fb5112;
-  cursor: pointer;
   border-radius: 8px;
   border: 4px solid #fb5112;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.footer__rocket a:hover {
+  background: #fb5112;
+  color: #fff;
 }
 
 .footer__bottom {
