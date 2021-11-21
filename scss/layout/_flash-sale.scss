@@ -31,11 +31,13 @@
     @include flex(stretch, flex-start, nowrap);
     img {
       width: 40%;
+      height: max-content;
     }
     &-info {
       h4 {
         font-size: 15px;
         font-weight: 700;
+        color: #000;
       }
     }
     &-price {
