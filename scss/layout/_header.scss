@@ -26,7 +26,6 @@
         transition: all 0.2s linear;
 
         &:hover {
-          font-size: 13px;
           background: transparent;
           border: 2px solid #fff;
         }
@@ -35,6 +34,7 @@
     &-btnlogin,
     &-btnlogout {
       background: $color-blue;
+      border: 2px solid $color-blue;
       font-size: 12px;
       padding: 10px;
       color: #fff;
@@ -43,6 +43,7 @@
     }
     &-btnlogout {
       background: #018848;
+      border: 2px solid #018848;
     }
   }
 
@@ -78,22 +79,21 @@
       @include flex(center, center, none);
       flex-direction: column;
       cursor: pointer;
-      img {
-        width: 30px;
-        height: 30px;
+      i {
+        font-size: 25px;
         transition: all 0.2s linear;
+        color: #fff;
+        margin-bottom: 5px;
       }
       b {
+        color: #fff;
         font-size: 14px;
         transition: all 0.2s linear;
       }
       &:hover {
-        img {
-          width: 35px;
-          height: 35px;
-        }
-        b {
-          font-size: 16px;
+        b,
+        i {
+          color: #000;
         }
       }
     }

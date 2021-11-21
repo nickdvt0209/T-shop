@@ -7,6 +7,10 @@
       padding: 5px 10px;
     }
   }
+
+  .hero__news-image-item {
+    margin-top: 10px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -19,13 +23,9 @@
       &-form {
         display: none;
       }
-      &-cart:hover {
-        img {
-          width: 30px;
-          height: 30px;
-        }
-        b {
-          font-size: 14px;
+      &-cart {
+        i {
+          font-size: 20px;
         }
       }
     }
@@ -40,6 +40,82 @@
       display: none;
     }
   }
+
+  .hero {
+    margin: 30px 0;
+    &__list {
+      display: block;
+    }
+    &__image {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 15px;
+      ol {
+        @include flex(center, center, nowrap);
+        li {
+          padding: 0;
+          margin: 0 15px;
+          &::after {
+            display: none;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: all 0.2s linear;
+            width: 15px;
+            height: 15px;
+            background: rgba($color-primary, 0.5);
+            border-radius: 50%;
+            &:hover {
+              li::before {
+                background: $color-primary;
+              }
+            }
+          }
+
+          p {
+            display: none;
+          }
+
+          // .active {
+          //   background: $color-primary;
+          //   width: 15px;
+          //   height: 15px;
+          //   border-radius: 50%;
+
+          //   &::after {
+          //     width: unset;
+          //   }
+          // }
+        }
+      }
+    }
+
+    &__news {
+      width: 100%;
+      margin-left: 0;
+      flex-direction: unset;
+      align-items: stretch;
+      &-image {
+        width: 50%;
+        margin-left: 5px;
+        box-shadow: $color-gray-300 0 0 5px 2px;
+        &-item {
+          margin: 0;
+          &:first-child {
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+    &__content {
+      width: 50%;
+      margin-right: 5px;
+      border-radius: 0;
+    }
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -48,14 +124,8 @@
       &-logo {
         font-size: 30px;
       }
-      &-cart {
-        img {
-          width: 20px;
-          height: 20px;
-        }
-        b {
-          font-size: 12px;
-        }
+      &-cart i {
+        font-size: 16px;
       }
     }
     &__search-mobile {
@@ -70,6 +140,13 @@
         font-size: 14px;
         line-height: 1.1;
       }
+    }
+  }
+
+  .hero {
+    margin: 20px 0;
+    &__news {
+      display: none;
     }
   }
 } ;

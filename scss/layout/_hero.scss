@@ -24,7 +24,7 @@
       grid-template-columns: repeat(6, 1fr);
       margin: 0;
       padding: 0 15px;
-      bottom: 3px;
+      bottom: 10px;
       li {
         background: transparent;
         text-indent: unset;
@@ -74,6 +74,7 @@
     .carousel-control-next,
     .carousel-control-prev {
       width: 5%;
+      transform: translateY(-8%);
       &-icon {
         width: 30px;
         height: 30px;
@@ -85,14 +86,14 @@
     margin-left: 10px;
     @include flex(center, center, nowrap);
     flex-direction: column;
-    &-image {
-      margin: 10px 0;
+    &-image-item {
+      display: inline-block;
+      margin-top: 30px;
     }
   }
   &__content {
     font-size: 14px;
     box-shadow: $color-gray-300 0 0 5px 2px;
-    margin-bottom: 10px;
     border-radius: 10px 10px 0 0;
     overflow: hidden;
 
@@ -105,9 +106,10 @@
     &-inner {
       @include flex(stretch, space-between, nowrap);
       margin-top: 10px;
-
+      padding: 0 5px;
       img {
         width: 30%;
+        height: fit-content;
         margin-right: 10px;
       }
     }
