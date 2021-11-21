@@ -24,6 +24,7 @@
       grid-template-columns: repeat(6, 1fr);
       margin: 0;
       padding: 0 15px;
+      bottom: 3px;
       li {
         background: transparent;
         text-indent: unset;
@@ -31,10 +32,51 @@
         height: unset;
         color: $color-gray-400;
         text-align: center;
+        padding: 10px 2px;
+        position: relative;
+        cursor: pointer;
+        &::after {
+          content: "";
+          display: inline-block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0;
+          height: 3px;
+          background: $color-primary;
+          transition: all 0.2s linear;
+        }
+        &:hover {
+          color: $color-primary;
+          &::after {
+            width: 100%;
+          }
+        }
+        p {
+          margin: 0;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          -webkit-line-clamp: 2;
+          font-size: 13px;
+          line-height: 1.2;
+        }
       }
       .active {
         background: transparent;
         color: $color-primary;
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+    .carousel-control-next,
+    .carousel-control-prev {
+      width: 5%;
+      &-icon {
+        width: 30px;
+        height: 30px;
       }
     }
   }

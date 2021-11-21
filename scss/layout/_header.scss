@@ -26,18 +26,23 @@
         transition: all 0.2s linear;
 
         &:hover {
-          color: $color-primary;
           font-size: 13px;
+          background: transparent;
+          border: 2px solid #fff;
         }
       }
     }
-    &-btnlogin {
+    &-btnlogin,
+    &-btnlogout {
       background: $color-blue;
       font-size: 12px;
+      padding: 10px;
+      color: #fff;
+      font-weight: 700;
+      border-radius: 5px;
     }
     &-btnlogout {
       background: #018848;
-      font-size: 12px;
     }
   }
 
@@ -91,6 +96,36 @@
           font-size: 16px;
         }
       }
+    }
+  }
+  &__toggle {
+    font-size: 30px;
+    display: none;
+  }
+
+  &__search-mobile {
+    border-radius: 20px;
+    background: #fff;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    position: relative;
+    display: none;
+    &-input {
+      width: 80%;
+      padding: 10px 20px;
+    }
+    &-button {
+      width: 20%;
+      padding: 10px;
+      margin-right: 3px;
+      border-radius: 0 20px 20px 0;
+      background: $color-primary;
+      color: #fff;
+      font-weight: 700;
+      position: absolute;
+      top: 3px;
+      right: 0;
     }
   }
 
