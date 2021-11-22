@@ -294,8 +294,13 @@
         font-size: 16px;
       }
     }
-    &__detail-item {
-      height: 295px;
+    &__detail {
+      &-item {
+        height: 295px;
+      }
+      &-inner h3 {
+        left: 30%;
+      }
     }
   }
 
@@ -330,7 +335,13 @@
     border-radius: 5px;
   }
 
-  .footer__content-item li:first-child {
-    height: 39px;
+  .footer {
+    &__content-item li:first-child {
+      height: 39px;
+    }
+    &__rocket {
+      bottom: 20px;
+      right: 20px;
+    }
   }
 } ;
