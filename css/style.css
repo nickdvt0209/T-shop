@@ -85,6 +85,20 @@ section[id] {
   background: #fb5112;
   color: #fff;
   padding: 5px 0;
+  -webkit-box-shadow: #323232 0 0 15px 0px;
+          box-shadow: #323232 0 0 15px 0px;
+}
+
+.header__fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+}
+
+.header__fixed .header__top {
+  display: none;
 }
 
 .header a {

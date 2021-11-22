@@ -2,6 +2,18 @@
   background: $color-primary;
   color: #fff;
   padding: 5px 0;
+  box-shadow: #323232 0 0 15px 0px;
+
+  &__fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    .header__top {
+      display: none;
+    }
+  }
   a {
     text-decoration: none;
     color: #fff;
